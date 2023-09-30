@@ -2,7 +2,6 @@
 using namespace std;
 
 int main(){
-	// Inialisasi variabel
 	string boxes[] = {"1","2","3","4","5","6","7","8","9"};
 	string player1 = "x";
 	string player2 = "o";
@@ -14,9 +13,7 @@ int main(){
 	bool again = true;
 	bool winner = false;
 	
-	// Looping Gameplay
 	while(again == true){
-		// Tabel Tic Tac Toe
 		for(int i = 0; i < 3; i++){
 			for(int j = 1; j <= 7; j++){
 				if(j == 1 || j == 3 || j == 5 || j == 7){
@@ -34,10 +31,8 @@ int main(){
 			}
 			cout << endl;
 		}
-		// Akhir Tabel
 		
 		if(winner == false){
-			// Memasukkan input dari player
 			if(countPlayer1 == countPlayer2){
 				cout << "Player 1 (x) : ";
 				cin >> locationSelect1;
@@ -65,7 +60,6 @@ int main(){
 			break;
 		}
 		
-		// Pengkondisian untuk penentuan pemenang
 		if((boxes[0] == "x" && boxes[1] == "x" && boxes[2] == "x") || 
 			(boxes[0] == "x" && boxes[3] == "x" && boxes[6] == "x") ||
 			(boxes[6] == "x" && boxes[7] == "x" && boxes[8] == "x") ||
